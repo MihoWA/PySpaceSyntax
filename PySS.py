@@ -114,9 +114,9 @@ def make_segments(coords, ways, intersections, arcangle):
                 tempdict[refs[i]].append(segID)
 
         #make sure can return down segment if not one-way
-        if refs[-1] in tempdict:
-	    tempdict[refs[-1]].append(segID) #previous (current) segment
-        else: tempdict[refs[-1]]=[]
+        if refs[i] in tempdict:
+	    tempdict[refs[i]].append(segID) #previous (current) segment
+        else: tempdict[refs[i]]=[segID]
         #record dead-ends
 
     linkdict={}
